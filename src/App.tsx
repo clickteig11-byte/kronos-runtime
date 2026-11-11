@@ -28,7 +28,7 @@ export default function App() {
         </a>
       </header>
 
-      {/* HERO SECTION */}
+      {/* HERO SECTION (ADAPTIVE LIGHT-MODE) */}
       <header id="top" className="hero-fullbleed">
         <div className="hero-body">
           <div className="hero-copy-stack">
@@ -60,17 +60,17 @@ export default function App() {
         <div className="lab-grid">
           <div>
             <span className="hero-small-label">KRONOS CLUSTER SIMULATOR // REGION: GLOBAL-MESH</span>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', textTransform: 'uppercase', marginBottom: '1rem', letterSpacing: '-0.02em' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '2.2rem', textTransform: 'uppercase', marginBottom: '1rem', letterSpacing: '-0.02em', color: 'var(--ink-primary)' }}>
               Dynamic Worker Pool &amp; Throughput
             </h2>
-            <p style={{ color: 'rgba(255,255,255,0.78)', lineHeight: 1.6, marginBottom: '2rem' }}>
+            <p style={{ color: 'var(--ink-muted)', lineHeight: 1.6, marginBottom: '2rem' }}>
               Simulate enterprise agent workloads under continuous task DAG scheduling. Zero synthetic overhead, deterministic state snapshots.
             </p>
 
-            <div style={{ marginBottom: '1.5rem', background: 'rgba(0,0,0,0.3)', padding: '1.5rem', border: '1px solid var(--border-soft)' }}>
+            <div style={{ marginBottom: '1.5rem', background: 'var(--bg-color)', padding: '1.5rem', border: '1px solid var(--border-soft)' }}>
               <label style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-mono)', fontSize: '0.76rem', marginBottom: '0.75rem', fontWeight: 600 }}>
-                <span>CONCURRENT AUTONOMOUS WORKERS</span>
-                <span style={{ color: 'var(--accent-color)' }}>{workerCount.toLocaleString()} ACTIVE AGENTS</span>
+                <span style={{ textTransform: 'uppercase' }}>CONCURRENT AUTONOMOUS WORKERS</span>
+                <span style={{ color: 'var(--accent-color)', fontWeight: 700 }}>{workerCount.toLocaleString()} ACTIVE AGENTS</span>
               </label>
               <input
                 type="range"
@@ -99,19 +99,19 @@ export default function App() {
                 </tr>
                 <tr>
                   <td className="spec-label">CRYPTOGRAPHIC TRACE STATUS</td>
-                  <td className="spec-value" style={{ color: '#fff' }}>ZERO-KNOWLEDGE VERIFIED</td>
+                  <td className="spec-value" style={{ color: 'var(--ink-primary)' }}>ZERO-KNOWLEDGE VERIFIED</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <div style={{ border: '1px solid var(--border-soft)', padding: '2.5rem', background: 'rgba(0, 0, 0, 0.4)' }}>
+          <div style={{ border: '1px solid var(--border-soft)', padding: '2.5rem', background: 'var(--bg-color)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-soft)', paddingBottom: '0.75rem', marginBottom: '1.5rem' }}>
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-color)', fontWeight: 700 }}>WORKER CLUSTER SPECTRUM</span>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem' }}>MESH: NOMINAL</span>
+              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', fontWeight: 600 }}>MESH: NOMINAL</span>
             </div>
 
-            <div style={{ height: '220px', display: 'flex', alignItems: 'flex-end', gap: '8px', background: 'rgba(0,0,0,0.6)', padding: '1rem', border: '1px solid var(--border-soft)' }}>
+            <div style={{ height: '220px', display: 'flex', alignItems: 'flex-end', gap: '8px', background: 'var(--surface-color)', padding: '1rem', border: '1px solid var(--border-soft)' }}>
               {[40, 65, 80, 50, 95, 85, 70, 90, 60, 75, 88, 92].map((base, idx) => {
                 const height = Math.min(100, Math.round((base * workerCount) / 25000));
                 return (
@@ -120,7 +120,7 @@ export default function App() {
                     style={{
                       flex: 1,
                       height: `${height}%`,
-                      background: idx % 2 === 0 ? 'var(--accent-color)' : 'rgba(255,255,255,0.3)',
+                      background: idx % 2 === 0 ? 'var(--accent-color)' : 'rgba(2, 132, 199, 0.2)',
                       transition: 'height 0.2s ease'
                     }}
                   />
@@ -128,7 +128,7 @@ export default function App() {
               })}
             </div>
 
-            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'rgba(255,255,255,0.6)' }}>
+            <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--ink-muted)', fontWeight: 600 }}>
               <span>EDGE CONSENSUS</span>
               <span style={{ color: 'var(--accent-color)' }}>SUB-10MS VERIFIED</span>
             </div>
@@ -138,10 +138,10 @@ export default function App() {
 
       {/* FOOTER */}
       <footer id="deploy" style={{ borderTop: '1px solid var(--border-soft)', padding: '4rem 3.5rem', textAlign: 'center', background: 'var(--surface-color)' }}>
-        <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', textTransform: 'uppercase', marginBottom: '0.75rem', letterSpacing: '0.04em' }}>
+        <p style={{ fontFamily: 'var(--font-display)', fontSize: '1.5rem', textTransform: 'uppercase', marginBottom: '0.75rem', letterSpacing: '0.04em', color: 'var(--ink-primary)' }}>
           Kronos Runtime Engine
         </p>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.74rem', color: 'var(--accent-color)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.74rem', color: 'var(--accent-color)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1.5rem', fontWeight: 600 }}>
           DISTRIBUTED AUTONOMOUS MESH · CLUSTER DEPLOYMENTS ACTIVE FOR 2026
         </p>
         <div style={{ display: 'inline-flex', gap: '1.5rem' }}>
