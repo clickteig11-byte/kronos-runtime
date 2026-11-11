@@ -64,7 +64,7 @@ export default function App() {
               Dynamic Worker Pool &amp; Throughput
             </h2>
             <p style={{ color: 'var(--ink-muted)', lineHeight: 1.6, marginBottom: '2rem' }}>
-              Simulate enterprise agent workloads under continuous task DAG scheduling. Zero synthetic overhead, deterministic state snapshots.
+              Simulate enterprise agent workloads under continuous task DAG scheduling. Sub-microsecond dispatch latency, deterministic state snapshots.
             </p>
 
             <div style={{ marginBottom: '1.5rem', background: 'var(--bg-color)', padding: '1.5rem', border: '1px solid var(--border-soft)' }}>
